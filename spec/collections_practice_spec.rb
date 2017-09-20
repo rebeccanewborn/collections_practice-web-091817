@@ -1,4 +1,6 @@
+require 'rubygems'
 require 'spec_helper'
+
 
 describe 'collections practice' do
 
@@ -27,6 +29,12 @@ describe 'collections practice' do
   describe '#swap_elements' do
     it 'swap the second and third elements of an array' do
       expect(swap_elements(["blake", "ashley", "scott"])).to eq(["blake", "scott", "ashley"])
+    end
+  end
+
+  describe '#swap_elements_from_to' do
+    it 'swap two elements of an array given their indices' do
+      expect(swap_elements_from_to(["blake", "ashley", "scott", "mary"], 3, 1)).to eq(["blake", "mary", "scott", "ashley"])
     end
   end
 
